@@ -8,7 +8,7 @@
   <a href="https://www.linkedin.com/in/iamgustavoti" target="_blank">
     <img src="https://img.shields.io/badge/-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white">
   </a>
-  <a href="mailto:seuemail@email.com">
+  <a href="mailto:gustavovozinhogg@outlook.com">
     <img src="https://img.shields.io/badge/-Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white">
   </a>
 </p>
@@ -20,7 +20,7 @@
 Me chamo Gustavo Lopes, tenho **22 anos** e sou de **São Paulo (ABC)**.  
 Atualmente curso **Sistemas de Informação** na **FAM**.  
 Sou um profissional em constante evolução, apaixonado por tecnologia e inovação.  
-Tenho conhecimentos em **HTML**, **CSS**, **JavaScript**, **PHP**, **MySQL** e **Java**, além de habilidades em automação, administração financeira e mecanismos automotivos.  
+Tenho conhecimentos em **HTML**, **CSS**, **JavaScript**, **PHP**, **MySQL**, **Java** e **Python**, além de habilidades em automação, administração financeira e mecanismos automotivos.  
 Busco oportunidades para crescer como desenvolvedor e contribuir com soluções tecnológicas que façam a diferença.
 
 ---
@@ -28,7 +28,7 @@ Busco oportunidades para crescer como desenvolvedor e contribuir com soluções 
 ## 🛠️ Tecnologias e Ferramentas
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=html,css,js,php,mysql,java" />
+  <img src="https://skillicons.dev/icons?i=html,css,js,php,mysql,java,python,vscode,github" />
 </p>
 
 ---
