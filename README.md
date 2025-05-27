@@ -40,5 +40,5 @@ Sinta-se à vontade para me chamar para conversar sobre **projetos**, **colabora
 ---
 
 <p align="center">
-  Feito com ❤️ por Gustavo Lopes
+  Feito com por Gustavo Lopes
 </p>
