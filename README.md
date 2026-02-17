@@ -83,12 +83,12 @@ MISSÃO:
 
 <hr/>
 
-<h2>CONECTAR()</h2>
+<h2>PODE CONECTAR </h2>
 
 <p>
 Se você gosta de <strong>dados</strong>, <strong>engenharia</strong>,
 <strong>bancos de dados</strong> e <strong>tecnologia de verdade</strong>,
-vamos conversar.
+ta mais que convidado a conectar e ter ideias para compartilhar .
 </p>
 
 <p align="center">
