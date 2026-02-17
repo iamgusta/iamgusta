@@ -23,26 +23,20 @@
 
 <hr/>
 
-<h2>🧬 SYSTEM.PROFILE</h2>
+<h2> Sobre mim </h2>
 
 <pre>
-NAME        : Gustavo Lopes
-AGE         : 23
-LOCATION    : Arapiraca - AL, Brazil
-ROLE.TARGET : Data Engineer
-STATUS      : Learning | Building | Scaling
+NOME        : Gustavo Lopes
+IDADE       : 23 anos
+LOCALIZAÇÃO : Arapiraca - AL, Brasil 📍
+OBJETIVO    : Engenheiro de Dados
+STATUS      : Evoluindo
+ESTUDANTE   : SISTEMAS DE INFORMAÇÃO
 </pre>
 
-📍 Currently based in **:contentReference[oaicite:0]{index=0} – AL**
 
 <hr/>
 
-<h2>🧠 DATA.MINDSET</h2>
-
-<blockquote>
-  Data is not just information.<br/>
-  Data is infrastructure.
-</blockquote>
 
 <p>
 Sou estudante de <strong>Sistemas de Informação</strong>, focado em <strong>Engenharia de Dados</strong> e
@@ -57,18 +51,11 @@ Meu objetivo é projetar sistemas capazes de transformar <strong>dados brutos</s
 
 <hr/>
 
-<h2>⚙️ CORE.TECH</h2>
 
-<pre>
-• SQL        → queries, joins, modelagem, performance
-• Python     → automação, manipulação e lógica de dados
-• Databases  → fundamentos de arquitetura relacional
-• ETL        → conceitos, pipelines e processamento
-</pre>
 
 <hr/>
 
-<h2>🛠️ STACK.ACTIVE</h2>
+<h2>PILHA TECNOLÓGICA</h2>
 
 <p align="center">
   <img src="https://skillicons.dev/icons?i=mysql,sqlite,python,git,github,vscode&theme=dark" />
@@ -78,24 +65,25 @@ Meu objetivo é projetar sistemas capazes de transformar <strong>dados brutos</s
 
 <hr/>
 
-<h2>📡 FUTURE.VISION</h2>
+
+<h2>📡 VISÃO DO FUTURO</h2>
 
 <pre>
-TARGET:
-• Data Engineering
-• Database Architecture
-• Scalable Pipelines
-• High Performance Systems
+OBJETIVOS:
+• Engenharia de Dados
+• Arquitetura de Bancos de Dados
+• Pipelines Escaláveis
+• Sistemas de Alta Performance
 
-MISSION:
-• Build solid data foundations
-• Optimize storage and queries
-• Enable data-driven decisions
+MISSÃO:
+• Construir bases de dados sólidas
+• Otimizar armazenamento e consultas
+• Viabilizar decisões orientadas por dados
 </pre>
 
 <hr/>
 
-<h2>☕ CONNECT()</h2>
+<h2>CONECTAR()</h2>
 
 <p>
 Se você gosta de <strong>dados</strong>, <strong>engenharia</strong>,
@@ -105,5 +93,5 @@ vamos conversar.
 
 <p align="center">
   <strong>⌁ Gustavo Lopes ⌁</strong><br/>
-  <em>Future Data Engineer</em>
+  <em>Futuro Engenheiro de Dados</em>
 </p>
