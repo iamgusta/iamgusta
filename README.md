@@ -1,53 +1,109 @@
-<h1 align="center">Olá! 👋 Me chamo Gustavo Lopes</h1>
+<h1 align="center">
+  ⌁ GUSTAVO LOPES ⌁
+</h1>
+
+<h3 align="center">
+  FUTURE DATA ENGINEER • DATABASES • DATA SYSTEMS
+</h3>
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com/?color=0D8ABC&size=22&center=true&vCenter=true&width=650&lines=Future+Data+Engineer;Foco+em+Banco+de+Dados+e+Engenharia+de+Dados;SQL+e+Python+em+constante+evolução" />
+  <img 
+    src="https://readme-typing-svg.herokuapp.com/?font=Orbitron&color=00FFE0&size=22&center=true&vCenter=true&width=900&lines=Engineering+the+future+with+data;Designing+databases+and+pipelines;SQL+%7C+Python+%7C+Data+Engineering;From+raw+data+to+intelligence" 
+  />
 </p>
 
 <p align="center">
   <a href="https://www.linkedin.com/in/iamgustavoti" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white">
+    <img src="https://img.shields.io/badge/LinkedIn-00FFE0?style=for-the-badge&logo=linkedin&logoColor=black">
   </a>
   <a href="mailto:gustavolopesti@outlook.com">
-    <img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white">
+    <img src="https://img.shields.io/badge/Email-00FFE0?style=for-the-badge&logo=gmail&logoColor=black">
   </a>
 </p>
 
----
+<hr/>
 
-## 🚀 Sobre mim
+<h2>🧬 SYSTEM.PROFILE</h2>
 
-Sou **Gustavo Lopes**, tenho **23 anos**, moro em **:contentReference[oaicite:0]{index=0} – AL** e curso **Sistemas de Informação**.
+<pre>
+NAME        : Gustavo Lopes
+AGE         : 23
+LOCATION    : Arapiraca - AL, Brazil
+ROLE.TARGET : Data Engineer
+STATUS      : Learning | Building | Scaling
+</pre>
 
-Meu objetivo profissional é me tornar **Engenheiro de Dados**, com foco em **Banco de Dados**, **modelagem**, **armazenamento**, **processamento de dados** e **otimização de consultas**.  
-Atualmente estudo **SQL e Python**, direcionando meu aprendizado para **engenharia de dados**, **ETL** e ambientes orientados a dados.
+📍 Currently based in **:contentReference[oaicite:0]{index=0} – AL**
 
-Sou movido por aprendizado contínuo, lógica e organização da informação, buscando evoluir tecnicamente para atuar em projetos de impacto.
+<hr/>
 
----
+<h2>🧠 DATA.MINDSET</h2>
 
-## 🛠️ Tecnologias e Ferramentas
+<blockquote>
+  Data is not just information.<br/>
+  Data is infrastructure.
+</blockquote>
 
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=mysql,sqlite,python,git,github,vscode,html,css,js" />
-  <img src="https://img.icons8.com/color/48/000000/oracle-logo.png" alt="Oracle Database" height="48px" />
+<p>
+Sou estudante de <strong>Sistemas de Informação</strong>, focado em <strong>Engenharia de Dados</strong> e
+<strong>Banco de Dados</strong>. Tenho interesse profundo em <strong>modelagem</strong>,
+<strong>armazenamento</strong>, <strong>processamento</strong> e <strong>otimização de consultas</strong>.
 </p>
 
----
+<p>
+Meu objetivo é projetar sistemas capazes de transformar <strong>dados brutos</strong> em
+<strong>informação confiável</strong>, <strong>escalável</strong> e pronta para tomada de decisão.
+</p>
 
-## 📈 Em desenvolvimento
+<hr/>
 
-- SQL (consultas avançadas, modelagem e performance)
-- Bancos de Dados Relacionais
-- Python para automação e dados
-- Fundamentos de Engenharia de Dados
+<h2>⚙️ CORE.TECH</h2>
 
----
+<pre>
+• SQL        → queries, joins, modelagem, performance
+• Python     → automação, manipulação e lógica de dados
+• Databases  → fundamentos de arquitetura relacional
+• ETL        → conceitos, pipelines e processamento
+</pre>
 
-## 🤝 Vamos conversar?
+<hr/>
 
-Fique à vontade para trocar ideias sobre **Banco de Dados**, **Engenharia de Dados**, **tecnologia** ou **carreira em TI**.
+<h2>🛠️ STACK.ACTIVE</h2>
 
 <p align="center">
-  <strong>Gustavo Lopes</strong>
+  <img src="https://skillicons.dev/icons?i=mysql,sqlite,python,git,github,vscode&theme=dark" />
+  <br/><br/>
+  <img src="https://img.icons8.com/color/48/000000/oracle-logo.png" height="48px" />
+</p>
+
+<hr/>
+
+<h2>📡 FUTURE.VISION</h2>
+
+<pre>
+TARGET:
+• Data Engineering
+• Database Architecture
+• Scalable Pipelines
+• High Performance Systems
+
+MISSION:
+• Build solid data foundations
+• Optimize storage and queries
+• Enable data-driven decisions
+</pre>
+
+<hr/>
+
+<h2>☕ CONNECT()</h2>
+
+<p>
+Se você gosta de <strong>dados</strong>, <strong>engenharia</strong>,
+<strong>bancos de dados</strong> e <strong>tecnologia de verdade</strong>,
+vamos conversar.
+</p>
+
+<p align="center">
+  <strong>⌁ Gustavo Lopes ⌁</strong><br/>
+  <em>Future Data Engineer</em>
 </p>
