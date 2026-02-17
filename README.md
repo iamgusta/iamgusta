@@ -1,15 +1,15 @@
 <h1 align="center">Olá! 👋 Me chamo Gustavo Lopes</h1>
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com/?color=0D8ABC&size=22&center=true&vCenter=true&width=600&lines=Futuro+Engenheiro+de+Dados;Apaixonado+por+Bancos+de+Dados+e+Tecnologia;Em+constante+aprendizado+e+evolução!" />
+  <img src="https://readme-typing-svg.herokuapp.com/?color=0D8ABC&size=22&center=true&vCenter=true&width=650&lines=Future+Data+Engineer;Foco+em+Banco+de+Dados+e+Engenharia+de+Dados;SQL+e+Python+em+constante+evolução" />
 </p>
 
 <p align="center">
   <a href="https://www.linkedin.com/in/iamgustavoti" target="_blank">
-    <img src="https://img.shields.io/badge/-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white">
   </a>
   <a href="mailto:gustavolopesti@outlook.com">
-    <img src="https://img.shields.io/badge/-Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white">
+    <img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white">
   </a>
 </p>
 
@@ -17,41 +17,37 @@
 
 ## 🚀 Sobre mim
 
-Me chamo Gustavo Lopes, tenho **22 anos** e sou de **São Paulo (ABC)**.  
-Atualmente curso **Sistemas de Informação** na **FAM**.
+Sou **Gustavo Lopes**, tenho **23 anos**, moro em **:contentReference[oaicite:0]{index=0} – AL** e curso **Sistemas de Informação**.
 
-Meu foco de carreira é me tornar um **Engenheiro de Dados**, com especialização em **bancos de dados relacionais** e **não relacionais**, além de ferramentas e linguagens voltadas para **processamento de dados**, **ETL** e **Big Data**.
+Meu objetivo profissional é me tornar **Engenheiro de Dados**, com foco em **Banco de Dados**, **modelagem**, **armazenamento**, **processamento de dados** e **otimização de consultas**.  
+Atualmente estudo **SQL e Python**, direcionando meu aprendizado para **engenharia de dados**, **ETL** e ambientes orientados a dados.
 
-Sou apaixonado por **dados**, **armazenamento**, **modelagem**, e **otimização de consultas**.
-
-Atualmente, estou aprofundando meus conhecimentos nas seguintes tecnologias:
-
-
-- **Linguagem SQL**
-- **Oracle Database**
-- **MySQL**
-- **SQLite**
-- **Python** (para automação e manipulação de dados)
-
-Sempre buscando novos desafios e aprendizados na área de **Data Engineering**!
+Sou movido por aprendizado contínuo, lógica e organização da informação, buscando evoluir tecnicamente para atuar em projetos de impacto.
 
 ---
 
 ## 🛠️ Tecnologias e Ferramentas
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=html,css,js,mysql,sqlite,python,git,vscode,github" />
+  <img src="https://skillicons.dev/icons?i=mysql,sqlite,python,git,github,vscode,html,css,js" />
   <img src="https://img.icons8.com/color/48/000000/oracle-logo.png" alt="Oracle Database" height="48px" />
 </p>
 
 ---
 
-## Vamos trocar dados ?
+## 📈 Em desenvolvimento
 
-Sinta-se à vontade para me chamar para conversar sobre **bancos de dados**, **engenharia de dados**, **projetos de tecnologia** ou simplesmente para trocar experiências sobre o mundo da **TI**!
+- SQL (consultas avançadas, modelagem e performance)
+- Bancos de Dados Relacionais
+- Python para automação e dados
+- Fundamentos de Engenharia de Dados
 
 ---
 
+## 🤝 Vamos conversar?
+
+Fique à vontade para trocar ideias sobre **Banco de Dados**, **Engenharia de Dados**, **tecnologia** ou **carreira em TI**.
+
 <p align="center">
-  Feito por Gustavo Lopes
+  <strong>Gustavo Lopes</strong>
 </p>
