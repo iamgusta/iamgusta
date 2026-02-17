@@ -31,7 +31,7 @@ IDADE       : 23 anos
 LOCALIZAÇÃO : Arapiraca - AL, Brasil 📍
 OBJETIVO    : Engenheiro de Dados
 STATUS      : Evoluindo
-ESTUDANTE   : SISTEMAS DE INFORMAÇÃO
+ESTUDANTE   : Sistemas de informação
 </pre>
 
 
