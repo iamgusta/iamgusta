@@ -55,7 +55,7 @@ Meu objetivo é projetar sistemas capazes de transformar <strong>dados brutos</s
 
 <hr/>
 
-<h2>PILHA TECNOLÓGICA</h2>
+<h2>TECNOLOGIAS</h2>
 
 <p align="center">
   <img src="https://skillicons.dev/icons?i=mysql,sqlite,python,git,github,vscode&theme=dark" />
