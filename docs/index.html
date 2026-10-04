@@ -3,655 +3,390 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#090000">
-  <meta name="description" content="Portfólio de Gustavo Lopes — Engenharia de Dados, Python, SQL, Airflow e Data Systems.">
-  <title>Gustavo Lopes • Data Engineer</title>
+  <meta name="theme-color" content="#060000">
+  <meta name="description" content="Gustavo Lopes — Data Engineer em formação. Python, SQL, Airflow, PostgreSQL, Docker, Data Warehouse e Power BI.">
+  <meta property="og:title" content="Gustavo Lopes — Data Engineer">
+  <meta property="og:description" content="Transformando dados brutos em sistemas confiáveis, pipelines e decisões.">
+  <meta property="og:type" content="website">
+  <title>Gustavo Lopes — Data Engineer</title>
 
-  <style>
-    :root{
-      --bg:#050000;
-      --bg2:#100000;
-      --panel:rgba(32,7,7,.82);
-      --panel2:rgba(16,4,4,.94);
-      --text:#fff3f3;
-      --muted:#c8a0a0;
-      --line:rgba(255,70,70,.18);
-      --red:#ff2020;
-      --red2:#ff4d4d;
-      --red3:#8f0000;
-      --green:#2bd17e;
-      --shadow:0 24px 80px rgba(255,0,0,.12);
-      --radius:22px;
-    }
-
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-
-    body{
-      margin:0;
-      min-height:100vh;
-      color:var(--text);
-      background:
-        radial-gradient(circle at 12% 0%, rgba(255,0,0,.14), transparent 30%),
-        radial-gradient(circle at 90% 8%, rgba(120,0,0,.22), transparent 28%),
-        linear-gradient(180deg,var(--bg),#020000 78%);
-      font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
-      overflow-x:hidden;
-    }
-
-    #network{
-      position:fixed;
-      inset:0;
-      z-index:-2;
-      width:100%;
-      height:100%;
-    }
-
-    body::after{
-      content:"";
-      position:fixed;
-      inset:0;
-      z-index:-1;
-      pointer-events:none;
-      background:linear-gradient(to bottom,rgba(10,0,0,.08),rgba(2,0,0,.93));
-    }
-
-    a{color:inherit;text-decoration:none}
-    .wrap{width:min(1180px,calc(100% - 32px));margin:auto}
-
-    nav{
-      position:sticky;
-      top:0;
-      z-index:50;
-      backdrop-filter:blur(18px);
-      background:rgba(7,0,0,.72);
-      border-bottom:1px solid rgba(255,60,60,.09);
-    }
-
-    .nav{
-      min-height:70px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:22px;
-    }
-
-    .brand{
-      font-weight:950;
-      letter-spacing:.12em;
-      font-size:.92rem;
-    }
-
-    .brand span{color:var(--red2)}
-
-    .navlinks{
-      display:flex;
-      gap:20px;
-      color:var(--muted);
-      font-size:.9rem;
-    }
-
-    .navlinks a:hover{color:#fff}
-
-    .hero{
-      min-height:86vh;
-      padding:72px 0 48px;
-      display:grid;
-      grid-template-columns:1.03fr .97fr;
-      align-items:center;
-      gap:34px;
-    }
-
-    .eyebrow{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding:8px 12px;
-      border-radius:999px;
-      border:1px solid rgba(255,55,55,.28);
-      background:rgba(255,0,0,.08);
-      color:#ff6666;
-      font-weight:850;
-      font-size:.8rem;
-      letter-spacing:.04em;
-      box-shadow:0 0 24px rgba(255,0,0,.06);
-    }
-
-    h1{
-      margin:22px 0 18px;
-      max-width:800px;
-      font-size:clamp(3rem,7vw,6rem);
-      line-height:.92;
-      letter-spacing:-.06em;
-    }
-
-    h1 .gradient{
-      background:linear-gradient(90deg,#ff2020,#ff5d5d,#ff0000);
-      -webkit-background-clip:text;
-      background-clip:text;
-      color:transparent;
-      filter:drop-shadow(0 0 18px rgba(255,0,0,.16));
-    }
-
-    .lead{
-      max-width:750px;
-      color:var(--muted);
-      line-height:1.75;
-      font-size:clamp(1rem,2vw,1.18rem);
-    }
-
-    .actions{
-      display:flex;
-      flex-wrap:wrap;
-      gap:12px;
-      margin-top:28px;
-    }
-
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:8px;
-      padding:12px 17px;
-      border-radius:12px;
-      background:#190707;
-      border:1px solid var(--line);
-      font-weight:850;
-      transition:.22s ease;
-    }
-
-    .btn.primary{
-      background:linear-gradient(90deg,#a90000,#ff1a1a);
-      border-color:transparent;
-      box-shadow:0 10px 34px rgba(255,0,0,.18);
-    }
-
-    .btn:hover{
-      transform:translateY(-2px);
-      border-color:rgba(255,75,75,.50);
-      box-shadow:0 12px 36px rgba(255,0,0,.10);
-    }
-
-    .mascot-wrap{
-      position:relative;
-      min-height:520px;
-      display:grid;
-      place-items:center;
-    }
-
-    .mascot-glow{
-      position:absolute;
-      width:78%;
-      aspect-ratio:1;
-      border-radius:50%;
-      background:radial-gradient(circle,rgba(255,0,0,.24),rgba(255,0,0,0) 68%);
-      filter:blur(16px);
-      animation:pulse 2.7s ease-in-out infinite;
-    }
-
-    .mascot{
-      position:relative;
-      width:min(620px,100%);
-      filter:drop-shadow(0 25px 50px rgba(255,0,0,.20));
-      animation:float 3.3s ease-in-out infinite;
-      user-select:none;
-      pointer-events:none;
-    }
-
-    @keyframes float{
-      0%,100%{transform:translateY(10px) rotate(-1deg)}
-      50%{transform:translateY(-16px) rotate(1deg)}
-    }
-
-    @keyframes pulse{
-      0%,100%{transform:scale(.95);opacity:.55}
-      50%{transform:scale(1.08);opacity:.95}
-    }
-
-    section{padding:68px 0}
-
-    .section-head{
-      display:flex;
-      justify-content:space-between;
-      align-items:end;
-      gap:24px;
-      margin-bottom:26px;
-    }
-
-    h2{
-      margin:0;
-      font-size:clamp(1.9rem,4vw,3.2rem);
-      letter-spacing:-.04em;
-    }
-
-    .section-head p{
-      max-width:620px;
-      margin:0;
-      color:var(--muted);
-      line-height:1.7;
-    }
-
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(12,1fr);
-      gap:16px;
-    }
-
-    .card{
-      grid-column:span 4;
-      position:relative;
-      overflow:hidden;
-      padding:22px;
-      border-radius:var(--radius);
-      background:linear-gradient(180deg,rgba(43,9,9,.84),rgba(14,3,3,.92));
-      border:1px solid rgba(255,255,255,.06);
-      box-shadow:0 10px 34px rgba(0,0,0,.24);
-      transition:.24s ease;
-    }
-
-    .card::before{
-      content:"";
-      position:absolute;
-      inset:0 auto auto 0;
-      width:100%;
-      height:2px;
-      background:linear-gradient(90deg,#ff1111,#ff5c5c,transparent);
-      opacity:.8;
-    }
-
-    .card:hover{
-      transform:translateY(-4px);
-      border-color:rgba(255,45,45,.30);
-      box-shadow:0 18px 45px rgba(255,0,0,.08);
-    }
-
-    .ico{font-size:1.8rem}
-    .card h3{margin:14px 0 8px}
-    .card p{margin:0;color:var(--muted);line-height:1.65}
-
-    .status{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:14px;
-    }
-
-    .metric{
-      padding:22px;
-      border-radius:18px;
-      background:var(--panel);
-      border:1px solid rgba(255,255,255,.06);
-    }
-
-    .metric .label{color:var(--muted);font-size:.82rem}
-    .metric .value{font-size:2.1rem;font-weight:950;margin-top:6px}
-    .metric .ok{color:var(--green);font-size:.82rem;font-weight:850;margin-top:5px}
-
-    .flow{
-      display:grid;
-      grid-template-columns:repeat(7,1fr);
-      gap:12px;
-    }
-
-    .node{
-      min-height:120px;
-      padding:17px 10px;
-      text-align:center;
-      border-radius:16px;
-      background:#180606;
-      border:1px solid var(--line);
-      position:relative;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:center;
-      gap:5px;
-    }
-
-    .node:not(:last-child)::after{
-      content:"→";
-      position:absolute;
-      right:-18px;
-      color:var(--red2);
-      font-weight:900;
-      z-index:4;
-    }
-
-    .node span{font-size:1.55rem}
-    .node small{color:var(--muted)}
-
-    .project{
-      display:grid;
-      grid-template-columns:1fr .8fr;
-      gap:18px;
-      padding:24px;
-      border-radius:24px;
-      background:
-        linear-gradient(135deg,rgba(255,0,0,.08),rgba(90,0,0,.10)),
-        rgba(14,3,3,.91);
-      border:1px solid rgba(255,50,50,.16);
-      box-shadow:var(--shadow);
-    }
-
-    .project ul{
-      margin:18px 0 0;
-      padding:0;
-      list-style:none;
-      display:grid;
-      gap:10px;
-      color:var(--muted);
-    }
-
-    .project li::before{
-      content:"✓ ";
-      color:var(--red2);
-      font-weight:900;
-    }
-
-    .terminal{
-      display:grid;
-      place-items:center;
-      border-radius:18px;
-      min-height:260px;
-      background:
-        radial-gradient(circle at center,rgba(255,0,0,.11),transparent 56%),
-        #080101;
-      border:1px solid rgba(255,255,255,.06);
-      font-family:"JetBrains Mono",Consolas,monospace;
-      color:#f0baba;
-      text-align:left;
-      padding:22px;
-      line-height:1.85;
-    }
-
-    .terminal b{
-      color:#ff5252;
-      font-size:1.08rem;
-    }
-
-    .reveal{
-      opacity:0;
-      transform:translateY(18px);
-      transition:.65s ease;
-    }
-
-    .reveal.visible{
-      opacity:1;
-      transform:none;
-    }
-
-    footer{
-      padding:42px 0 72px;
-      text-align:center;
-      color:var(--muted);
-    }
-
-    @media(max-width:950px){
-      .hero{grid-template-columns:1fr}
-      .mascot-wrap{min-height:420px}
-      .card{grid-column:span 6}
-      .status{grid-template-columns:repeat(2,1fr)}
-      .flow{grid-template-columns:repeat(4,1fr)}
-      .node:nth-child(4)::after{display:none}
-      .project{grid-template-columns:1fr}
-      .navlinks{display:none}
-    }
-
-    @media(max-width:640px){
-      .wrap{width:min(calc(100% - 20px),1180px)}
-      .hero{padding-top:46px;gap:18px}
-      h1{font-size:3rem}
-      .mascot-wrap{min-height:330px}
-      .card{grid-column:1/-1}
-      .status{grid-template-columns:1fr}
-      .flow{grid-template-columns:1fr}
-      .node::after{display:none!important}
-      .section-head{align-items:flex-start;flex-direction:column}
-      .actions{flex-direction:column}
-      .btn{width:100%}
-    }
-  </style>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
-  <canvas id="network"></canvas>
-
-  <nav>
-    <div class="wrap nav">
-      <div class="brand">🧬 GUSTAVO<span>.DATA</span></div>
-      <div class="navlinks">
-        <a href="#about">Sobre</a>
-        <a href="#stack">Stack</a>
-        <a href="#flow">Fluxo</a>
-        <a href="#project">Projeto</a>
-      </div>
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <div class="loader__brand">GUSTAVO<span>.DATA</span></div>
+      <div class="loader__track"><span id="loaderBar"></span></div>
+      <div class="loader__meta"><span>INITIALIZING DATA SYSTEM</span><b id="loaderPct">0%</b></div>
     </div>
-  </nav>
+  </div>
 
-  <main>
-    <div class="wrap hero">
-      <div>
-        <span class="eyebrow">⚡ DATA ENGINEERING</span>
+  <div class="noise"></div>
+  <canvas id="dataCanvas" aria-hidden="true"></canvas>
 
-        <h1>
-          Gustavo Lopes.<br>
-          <span class="gradient">Construindo com dados.</span>
-        </h1>
+  <div class="cursor cursor--dot"></div>
+  <div class="cursor cursor--ring"></div>
 
-        <p class="lead">
-          Estudante de Sistemas de Informação com foco em Engenharia de Dados,
-          pipelines, bancos de dados e sistemas capazes de transformar dados brutos
-          em informação confiável e pronta para decisão.
-        </p>
+  <header class="site-header">
+    <a class="brand magnetic" href="#top" aria-label="Voltar ao início">
+      <span class="brand__mark">⌁</span>
+      <span>GUSTAVO<span class="red">.DATA</span></span>
+    </a>
 
-        <div class="actions">
-          <a class="btn primary" href="#project">🚀 Ver projeto</a>
-          <a class="btn" href="https://github.com/iamgusta" target="_blank" rel="noopener">💻 GitHub</a>
-          <a class="btn" href="https://www.linkedin.com/in/iamgustavoti" target="_blank" rel="noopener">🔗 LinkedIn</a>
+    <nav class="nav" aria-label="Navegação principal">
+      <a href="#about">Sobre</a>
+      <a href="#work">Projeto</a>
+      <a href="#stack">Stack</a>
+      <a href="#contact">Contato</a>
+    </nav>
+
+    <a class="availability magnetic" href="mailto:gustavolopesti@outlook.com">
+      <i></i>
+      disponível
+    </a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero__grid wrap">
+        <div class="hero__copy">
+          <div class="kicker reveal">
+            <span>01</span>
+            <span>DATA ENGINEERING / BRAZIL</span>
+          </div>
+
+          <h1 class="hero__title">
+            <span class="line"><span>DATA</span></span>
+            <span class="line line--outline"><span>ENGINEER</span></span>
+            <span class="line line--small"><span>IN BUILD<span class="blink-dot">.</span></span></span>
+          </h1>
+
+          <p class="hero__intro reveal">
+            Eu projeto o caminho dos dados — da fonte até a análise.
+            Python, SQL, pipelines, qualidade, Data Warehouse e automação.
+          </p>
+
+          <div class="hero__actions reveal">
+            <a class="btn btn--primary magnetic" href="#work">
+              <span>Ver projeto</span>
+              <b>↘</b>
+            </a>
+            <a class="btn btn--ghost magnetic" href="https://github.com/iamgusta" target="_blank" rel="noopener">
+              <span>GitHub</span>
+              <b>↗</b>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero__visual reveal" id="heroVisual">
+          <div class="visual__frame">
+            <div class="visual__topline">
+              <span>DATA SYSTEM // 01</span>
+              <span class="live"><i></i> LIVE</span>
+            </div>
+
+            <img
+              class="mascot"
+              id="mascot"
+              src="./assets/mascot-data.png"
+              alt="Mascote robô futurista de dados"
+            >
+
+            <div class="scan"></div>
+            <div class="hud hud--a">SQL<br><b>ACTIVE</b></div>
+            <div class="hud hud--b">PIPELINE<br><b>READY</b></div>
+            <div class="hud hud--c">ETL<br><b>06:00</b></div>
+
+            <div class="dice-scene" aria-hidden="true">
+              <div class="cube">
+                <div class="cube__face cube__face--front"><span>●</span><span>●</span><span>●</span></div>
+                <div class="cube__face cube__face--back"><span>●</span><span>●</span><span>●</span><span>●</span></div>
+                <div class="cube__face cube__face--right"><span>●</span><span>●</span></div>
+                <div class="cube__face cube__face--left"><span>●</span><span>●</span><span>●</span><span>●</span><span>●</span></div>
+                <div class="cube__face cube__face--top"><span>●</span></div>
+                <div class="cube__face cube__face--bottom"><span>●</span><span>●</span><span>●</span><span>●</span><span>●</span><span>●</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="visual__caption">
+            <span>ROBOTIC DATA MASCOT</span>
+            <span>RED PROTOCOL / v3.0</span>
+          </div>
         </div>
       </div>
 
-      <div class="mascot-wrap">
-        <div class="mascot-glow"></div>
-        <img class="mascot" src="../assets/robot-data-animated.svg" alt="Robô Data Engineer animado">
+      <div class="hero__footer wrap reveal">
+        <div class="scroll-note"><span></span> SCROLL TO EXPLORE</div>
+        <div class="coordinates">09°45′S / 36°39′W</div>
       </div>
-    </div>
+    </section>
 
-    <section id="about">
+    <section class="marquee" aria-label="Tecnologias">
+      <div class="marquee__track">
+        <span>PYTHON</span><i>◆</i>
+        <span>SQL</span><i>◆</i>
+        <span>POSTGRESQL</span><i>◆</i>
+        <span>AIRFLOW</span><i>◆</i>
+        <span>DOCKER</span><i>◆</i>
+        <span>DATA WAREHOUSE</span><i>◆</i>
+        <span>POWER BI</span><i>◆</i>
+        <span>ETL / ELT</span><i>◆</i>
+        <span>PYTHON</span><i>◆</i>
+        <span>SQL</span><i>◆</i>
+        <span>POSTGRESQL</span><i>◆</i>
+        <span>AIRFLOW</span><i>◆</i>
+        <span>DOCKER</span><i>◆</i>
+        <span>DATA WAREHOUSE</span><i>◆</i>
+        <span>POWER BI</span><i>◆</i>
+        <span>ETL / ELT</span><i>◆</i>
+      </div>
+    </section>
+
+    <section class="about section" id="about">
       <div class="wrap">
-        <div class="section-head reveal">
-          <div>
-            <span class="eyebrow">🧠 PROFILE</span>
-            <h2>Dados, sistemas e engenharia.</h2>
+        <div class="section-index reveal">
+          <span>02</span>
+          <span>SOBRE / PERFIL</span>
+        </div>
+
+        <div class="about__layout">
+          <div class="about__statement reveal">
+            <p>
+              Não quero só <em>ver</em> dados.
+              Quero entender como eles <strong>nascem</strong>,
+              como <strong>viajam</strong> e como chegam
+              <strong>confiáveis</strong> para uma decisão.
+            </p>
           </div>
+
+          <div class="about__side reveal">
+            <p>
+              Sou Gustavo Lopes, estudante de Sistemas de Informação,
+              construindo minha carreira em Engenharia de Dados.
+            </p>
+            <p>
+              Meu foco é transformar processos manuais e dados dispersos em
+              pipelines organizados, observáveis e reutilizáveis.
+            </p>
+          </div>
+        </div>
+
+        <div class="facts">
+          <article class="fact reveal">
+            <span class="fact__num" data-count="23">0</span>
+            <span class="fact__label">anos</span>
+          </article>
+          <article class="fact reveal">
+            <span class="fact__num">SI</span>
+            <span class="fact__label">Sistemas de Informação</span>
+          </article>
+          <article class="fact reveal">
+            <span class="fact__num">AL</span>
+            <span class="fact__label">Arapiraca, Brasil</span>
+          </article>
+          <article class="fact reveal">
+            <span class="fact__num">DATA</span>
+            <span class="fact__label">foco profissional</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="work section" id="work">
+      <div class="wrap">
+        <div class="section-index reveal">
+          <span>03</span>
+          <span>SELECTED WORK / 2026</span>
+        </div>
+
+        <div class="work__headline reveal">
+          <h2>Plataforma de<br><span>Dados de E-commerce</span></h2>
           <p>
-            Meu foco é entender o caminho completo dos dados: origem, ingestão,
-            transformação, qualidade, armazenamento, modelagem e consumo analítico.
+            Um projeto de ponta a ponta para mostrar engenharia, não apenas dashboard.
           </p>
         </div>
 
-        <div class="status reveal">
-          <div class="metric"><div class="label">LOCATION</div><div class="value">AL 🇧🇷</div><div class="ok">● Arapiraca</div></div>
-          <div class="metric"><div class="label">FOCUS</div><div class="value">DATA</div><div class="ok">● Engineering</div></div>
-          <div class="metric"><div class="label">CORE</div><div class="value">SQL</div><div class="ok">● Python</div></div>
-          <div class="metric"><div class="label">STATUS</div><div class="value">BUILD</div><div class="ok">● Evoluindo</div></div>
-        </div>
-      </div>
-    </section>
+        <article class="case reveal">
+          <div class="case__visual">
+            <div class="pipeline-map">
+              <div class="pipeline-map__top">
+                <span>ECOMMERCE_DATA_PLATFORM</span>
+                <span>PIPELINE STATUS: <b>SUCCESS</b></span>
+              </div>
 
-    <section id="stack">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <div>
-            <span class="eyebrow">🧰 STACK</span>
-            <h2>Ferramentas que movem dados.</h2>
-          </div>
-          <p>Tecnologias que uso para extrair, transformar, armazenar, orquestrar e analisar dados.</p>
-        </div>
+              <div class="pipeline-map__flow">
+                <div class="pipe-node">
+                  <small>01</small><b>Sources</b><span>API / CSV / JSON</span>
+                </div>
+                <div class="pipe-line"><i></i></div>
+                <div class="pipe-node">
+                  <small>02</small><b>Transform</b><span>Python / Pandas</span>
+                </div>
+                <div class="pipe-line"><i></i></div>
+                <div class="pipe-node">
+                  <small>03</small><b>Warehouse</b><span>PostgreSQL</span>
+                </div>
+                <div class="pipe-line"><i></i></div>
+                <div class="pipe-node">
+                  <small>04</small><b>Analytics</b><span>Power BI</span>
+                </div>
+              </div>
 
-        <div class="grid">
-          <article class="card reveal"><div class="ico">🐍</div><h3>Python</h3><p>Automação, ingestão, transformação e construção de pipelines.</p></article>
-          <article class="card reveal"><div class="ico">🗃️</div><h3>SQL</h3><p>Consultas, modelagem, análise e manipulação de dados.</p></article>
-          <article class="card reveal"><div class="ico">🐘</div><h3>PostgreSQL</h3><p>Persistência, Data Warehouse e modelagem dimensional.</p></article>
-          <article class="card reveal"><div class="ico">🌬️</div><h3>Apache Airflow</h3><p>Orquestração, agendamento, retries e dependências.</p></article>
-          <article class="card reveal"><div class="ico">🐳</div><h3>Docker</h3><p>Containers, serviços isolados e ambientes reproduzíveis.</p></article>
-          <article class="card reveal"><div class="ico">📊</div><h3>Power BI</h3><p>Dashboards, indicadores e camada de consumo analítico.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="flow">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <div>
-            <span class="eyebrow">🧬 DATA FLOW</span>
-            <h2>Meu jeito de pensar dados.</h2>
-          </div>
-          <p>Uma boa solução começa na origem, passa por qualidade e termina em informação utilizável.</p>
-        </div>
-
-        <div class="flow reveal">
-          <div class="node"><span>📡</span><b>Source</b><small>CSV • JSON • API</small></div>
-          <div class="node"><span>🧲</span><b>Ingest</b><small>Python</small></div>
-          <div class="node"><span>🧪</span><b>Transform</b><small>Pandas</small></div>
-          <div class="node"><span>🛡️</span><b>Quality</b><small>Validation</small></div>
-          <div class="node"><span>🗄️</span><b>Store</b><small>PostgreSQL</small></div>
-          <div class="node"><span>⭐</span><b>Model</b><small>DW</small></div>
-          <div class="node"><span>📊</span><b>Analyze</b><small>Power BI</small></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="project">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <div>
-            <span class="eyebrow">🚀 FEATURED PROJECT</span>
-            <h2>Plataforma de Dados de E-commerce.</h2>
-          </div>
-          <p>Pipeline completo criado para praticar uma arquitetura real de Engenharia de Dados.</p>
-        </div>
-
-        <div class="project reveal">
-          <div>
-            <h3>🛒 E-commerce Data Platform</h3>
-            <p class="lead" style="font-size:1rem">
-              Integra múltiplas fontes, API, ETL, qualidade, PostgreSQL,
-              Data Warehouse, Airflow, Docker e Power BI.
-            </p>
-
-            <ul>
-              <li>API de pedidos com FastAPI</li>
-              <li>Pipeline ETL automatizado</li>
-              <li>Data Quality antes da carga</li>
-              <li>Star Schema no PostgreSQL</li>
-              <li>Carga incremental do Data Warehouse</li>
-              <li>Orquestração diária com Apache Airflow</li>
-              <li>Dashboard conectado no Power BI</li>
-            </ul>
-
-            <div class="actions">
-              <a class="btn primary" href="https://iamgusta.github.io/Plataforma-dados-e-commerce/" target="_blank" rel="noopener">🌐 Abrir plataforma</a>
-              <a class="btn" href="https://github.com/iamgusta/Plataforma-dados-e-commerce" target="_blank" rel="noopener">💻 Repositório</a>
+              <div class="pipeline-terminal">
+                <div><span>$</span> airflow dags trigger pipeline_dados_ecommerce</div>
+                <div><span>✓</span> extrair_pedidos_api ........ success</div>
+                <div><span>✓</span> transformar_dados ......... success</div>
+                <div><span>✓</span> verificar_qualidade ....... success</div>
+                <div><span>✓</span> carregar_data_warehouse ... success</div>
+                <div class="terminal-success">10 / 10 TASKS SUCCESS</div>
+              </div>
             </div>
           </div>
 
-          <div class="terminal">
+          <div class="case__info">
             <div>
-              <b>PIPELINE STATUS</b><br><br>
-              📡 API .............. ONLINE<br>
-              🐳 Docker ........... READY<br>
-              🌬️ Airflow ......... SCHEDULED<br>
-              🐘 PostgreSQL ...... CONNECTED<br>
-              ⭐ Warehouse ........ LOADED<br>
-              📊 Power BI ........ CONNECTED<br><br>
-              <span style="color:#ff4d4d;font-weight:900">● 10 / 10 TASKS SUCCESS</span>
+              <span class="case__eyebrow">CASE STUDY 001</span>
+              <h3>Do dado bruto<br>ao Data Warehouse.</h3>
+              <p>
+                API com FastAPI, ETL em Python, qualidade de dados,
+                PostgreSQL, modelo dimensional, carga incremental,
+                Apache Airflow, Docker e consumo no Power BI.
+              </p>
             </div>
+
+            <div class="case__stats">
+              <div><b>5.000</b><span>pedidos</span></div>
+              <div><b>10/10</b><span>tasks</span></div>
+              <div><b>5</b><span>dimensões</span></div>
+            </div>
+
+            <div class="case__links">
+              <a class="text-link magnetic" href="https://iamgusta.github.io/Plataforma-dados-e-commerce/" target="_blank" rel="noopener">
+                Abrir projeto <span>↗</span>
+              </a>
+              <a class="text-link magnetic" href="https://github.com/iamgusta/Plataforma-dados-e-commerce" target="_blank" rel="noopener">
+                Ver código <span>↗</span>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="process section">
+      <div class="wrap">
+        <div class="section-index reveal">
+          <span>04</span>
+          <span>DATA PROCESS / HOW I THINK</span>
+        </div>
+
+        <div class="process__grid">
+          <div class="process__intro reveal">
+            <h2>Pipeline antes<br>de promessa.</h2>
+            <p>
+              Engenharia de Dados é disciplina de fluxo, contexto e confiabilidade.
+              Meu processo segue uma cadeia clara.
+            </p>
+          </div>
+
+          <div class="process__steps">
+            <article class="step reveal">
+              <span>01</span><h3>INGEST</h3><p>Capturar dados de fontes diferentes sem perder contexto.</p>
+            </article>
+            <article class="step reveal">
+              <span>02</span><h3>TRANSFORM</h3><p>Limpar, tipar, relacionar e preparar dados para uso real.</p>
+            </article>
+            <article class="step reveal">
+              <span>03</span><h3>VALIDATE</h3><p>Testar qualidade antes de confiar no resultado.</p>
+            </article>
+            <article class="step reveal">
+              <span>04</span><h3>MODEL</h3><p>Organizar estruturas que façam sentido para análise.</p>
+            </article>
+            <article class="step reveal">
+              <span>05</span><h3>ORCHESTRATE</h3><p>Automatizar execução, retries, dependências e agenda.</p>
+            </article>
+            <article class="step reveal">
+              <span>06</span><h3>DELIVER</h3><p>Entregar dados prontos para sistemas, métricas e decisões.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stack section" id="stack">
+      <div class="wrap">
+        <div class="section-index reveal">
+          <span>05</span>
+          <span>STACK / TOOLBOX</span>
+        </div>
+
+        <div class="stack__title reveal">
+          <h2>Ferramentas são meios.<br><span>Arquitetura é decisão.</span></h2>
+        </div>
+
+        <div class="stack__list">
+          <article class="stack-row reveal">
+            <span>01</span><b>Python</b><p>ETL, automação, processamento e APIs</p><i>PY</i>
+          </article>
+          <article class="stack-row reveal">
+            <span>02</span><b>SQL / PostgreSQL</b><p>Modelagem, consultas e Data Warehouse</p><i>SQL</i>
+          </article>
+          <article class="stack-row reveal">
+            <span>03</span><b>Apache Airflow</b><p>Orquestração, schedule, retries e DAGs</p><i>AF</i>
+          </article>
+          <article class="stack-row reveal">
+            <span>04</span><b>Docker</b><p>Ambientes reproduzíveis e serviços isolados</p><i>DK</i>
+          </article>
+          <article class="stack-row reveal">
+            <span>05</span><b>Power BI</b><p>Modelagem analítica, KPIs e dashboards</p><i>BI</i>
+          </article>
+          <article class="stack-row reveal">
+            <span>06</span><b>Git / GitHub</b><p>Versionamento, documentação e entrega</p><i>GH</i>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <div class="wrap">
+        <div class="contact__panel reveal">
+          <div class="contact__top">
+            <span>06 / CONTATO</span>
+            <span>OPEN TO DATA OPPORTUNITIES</span>
+          </div>
+
+          <h2>
+            Tem um problema<br>
+            com <span>dados?</span>
+          </h2>
+
+          <p>
+            Estou construindo minha carreira em Engenharia de Dados
+            e aberto a conexões, projetos e oportunidades.
+          </p>
+
+          <div class="contact__actions">
+            <a class="btn btn--primary magnetic" href="mailto:gustavolopesti@outlook.com">
+              Falar comigo <b>↗</b>
+            </a>
+            <a class="btn btn--ghost magnetic" href="https://www.linkedin.com/in/iamgustavoti" target="_blank" rel="noopener">
+              LinkedIn <b>↗</b>
+            </a>
+          </div>
+
+          <div class="contact__footer">
+            <span>GUSTAVO LOPES © 2026</span>
+            <span>ARAPIRACA / AL / BR</span>
+            <a href="#top">BACK TO TOP ↑</a>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="wrap">
-      🔴 dados → engenharia → inteligência<br>
-      <span style="font-size:.82rem">Gustavo Lopes • Data Engineering</span>
-    </div>
-  </footer>
-
-  <script>
-    const canvas = document.getElementById("network");
-    const ctx = canvas.getContext("2d");
-    let particles = [];
-
-    function resize(){
-      canvas.width = window.innerWidth * devicePixelRatio;
-      canvas.height = window.innerHeight * devicePixelRatio;
-      canvas.style.width = window.innerWidth + "px";
-      canvas.style.height = window.innerHeight + "px";
-      ctx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0);
-
-      const count = Math.min(72, Math.max(28, Math.floor(window.innerWidth / 21)));
-      particles = Array.from({length:count}, () => ({
-        x:Math.random()*window.innerWidth,
-        y:Math.random()*window.innerHeight,
-        vx:(Math.random()-.5)*.34,
-        vy:(Math.random()-.5)*.34,
-        r:Math.random()*1.6+.7
-      }));
-    }
-
-    function draw(){
-      ctx.clearRect(0,0,window.innerWidth,window.innerHeight);
-
-      for(const p of particles){
-        p.x += p.vx;
-        p.y += p.vy;
-
-        if(p.x < 0 || p.x > window.innerWidth) p.vx *= -1;
-        if(p.y < 0 || p.y > window.innerHeight) p.vy *= -1;
-
-        ctx.beginPath();
-        ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-        ctx.fillStyle = "rgba(255,45,45,.50)";
-        ctx.fill();
-      }
-
-      for(let i=0;i<particles.length;i++){
-        for(let j=i+1;j<particles.length;j++){
-          const a = particles[i];
-          const b = particles[j];
-          const dx = a.x-b.x;
-          const dy = a.y-b.y;
-          const d = Math.sqrt(dx*dx+dy*dy);
-
-          if(d < 120){
-            ctx.beginPath();
-            ctx.moveTo(a.x,a.y);
-            ctx.lineTo(b.x,b.y);
-            ctx.strokeStyle = `rgba(255,35,35,${(1-d/120)*.13})`;
-            ctx.stroke();
-          }
-        }
-      }
-
-      requestAnimationFrame(draw);
-    }
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting){
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    }, {threshold:.12});
-
-    document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
-
-    window.addEventListener("resize", resize);
-    resize();
-    draw();
-  </script>
+  <script src="./app.js"></script>
 </body>
 </html>

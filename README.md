@@ -1,177 +1,68 @@
 <div align="center">
 
-# 🧬 GUSTAVO LOPES
+<img src="./docs/assets/profile-banner.svg" width="100%" alt="Gustavo Lopes — Data Engineering">
 
-### DATA ENGINEER • PYTHON • SQL • PIPELINES • AIRFLOW
+<br>
 
-<img
-  src="https://readme-typing-svg.herokuapp.com?font=Orbitron&weight=700&size=22&duration=2300&pause=650&color=00E5FF&center=true&vCenter=true&width=900&lines=Transformando+dados+brutos+em+valor;Construindo+pipelines+de+dados;Python+%E2%80%A2+SQL+%E2%80%A2+Airflow+%E2%80%A2+PostgreSQL;Data+Engineering+%E2%86%92+Analytics+%E2%86%92+Decision"
-  alt="Typing animation"
-/>
-
-<br/>
-
+<a href="https://iamgusta.github.io/iamgusta/">
+  <img src="https://img.shields.io/badge/PORTFÓLIO-FF2525?style=for-the-badge&logo=firefoxbrowser&logoColor=white">
+</a>
 <a href="https://www.linkedin.com/in/iamgustavoti">
-  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white">
+  <img src="https://img.shields.io/badge/LINKEDIN-111111?style=for-the-badge&logo=linkedin&logoColor=FF2525">
 </a>
 <a href="mailto:gustavolopesti@outlook.com">
-  <img src="https://img.shields.io/badge/Email-111827?style=for-the-badge&logo=microsoftoutlook&logoColor=00E5FF">
-</a>
-<a href="https://github.com/iamgusta">
-  <img src="https://img.shields.io/badge/GitHub-111827?style=for-the-badge&logo=github&logoColor=white">
+  <img src="https://img.shields.io/badge/EMAIL-111111?style=for-the-badge&logo=microsoftoutlook&logoColor=FF2525">
 </a>
 
 </div>
 
----
+## `whoami`
 
-<div align="center">
-  <img src="./assets/data-engineer-flow.svg" width="100%" alt="Animated data engineering flow"/>
-</div>
+Estudante de **Sistemas de Informação** com foco em **Engenharia de Dados**.
 
----
-
-## 🧠 Sobre mim
+Construo projetos que percorrem o caminho completo dos dados: **ingestão → transformação → qualidade → modelagem → orquestração → análise**.
 
 ```text
-╭──────────────────────────────────────────────────────────────╮
-│ USER ............ Gustavo Lopes                              │
-│ LOCATION ........ Arapiraca - AL, Brasil                    │
-│ EDUCATION ....... Sistemas de Informação                    │
-│ FOCUS ........... Engenharia de Dados                       │
-│ STACK ........... Python • SQL • PostgreSQL • Airflow       │
-│ MISSION ......... Dados confiáveis → decisões melhores      │
-╰──────────────────────────────────────────────────────────────╯
+LOCATION  Arapiraca - AL, Brasil
+FOCUS     Data Engineering
+CORE      Python + SQL
+BUILDING  Pipelines + Data Warehouse + Airflow
 ```
 
-Sou estudante de **Sistemas de Informação** com foco em **Engenharia de Dados** e **Banco de Dados**.
+## Projeto em destaque
 
-Meu objetivo é construir pipelines, modelos e sistemas capazes de transformar **dados brutos** em informação **confiável, organizada e pronta para análise**.
+### Plataforma de Dados de E-commerce
 
----
+Pipeline de dados de ponta a ponta com **FastAPI, Python, Pandas, PostgreSQL, Data Warehouse, Apache Airflow, Docker e Power BI**.
 
-## ⚡ System Status
+**[Abrir plataforma](https://iamgusta.github.io/Plataforma-dados-e-commerce/)** · **[Ver repositório](https://github.com/iamgusta/Plataforma-dados-e-commerce)**
 
 ```text
-PYTHON ............ ███████████████████░  BUILDING
-SQL ............... ████████████████████  ACTIVE
-POSTGRESQL ........ ███████████████████░  ACTIVE
-DATA PIPELINES .... ██████████████████░░  BUILDING
-AIRFLOW ........... ████████████████░░░░  EVOLVING
-POWER BI .......... ███████████████░░░░░  EVOLVING
-DOCKER ............ ███████████████░░░░░  EVOLVING
+API / CSV / JSON
+       ↓
+Python + Pandas
+       ↓
+Data Quality
+       ↓
+PostgreSQL
+       ↓
+Star Schema
+       ↓
+Airflow + Docker
+       ↓
+Power BI
 ```
 
----
+## Stack
 
-## 🧰 Tecnologias
-
-<div align="center">
-
-<img src="https://skillicons.dev/icons?i=python,postgres,mysql,git,github,docker,vscode&theme=dark" />
-
-<br/><br/>
-
-<img src="https://img.shields.io/badge/Apache_Airflow-017CEE?style=for-the-badge&logo=apacheairflow&logoColor=white"/>
-<img src="https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=111827"/>
-<img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white"/>
-<img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white"/>
-
-</div>
-
----
-
-## 🚀 Projeto em destaque
-
-### 🛒 Plataforma de Dados de E-commerce
-
-Pipeline completo de Engenharia de Dados com:
-
-```text
-📡 API + CSV + JSON
-        ↓
-🐍 Python / Pandas
-        ↓
-🛡️ Data Quality
-        ↓
-🐘 PostgreSQL
-        ↓
-⭐ Data Warehouse
-        ↓
-🌬️ Apache Airflow
-        ↓
-🐳 Docker
-        ↓
-📊 Power BI
-```
-
-**Projeto online:**  
-https://iamgusta.github.io/Plataforma-dados-e-commerce/
-
-
----
-
-## 🧬 Meu fluxo de Engenharia de Dados
-
-```mermaid
-flowchart LR
-    A["📡 Sources"] --> B["🧲 Ingestion"]
-    B --> C["🧪 Transform"]
-    C --> D["🛡️ Quality"]
-    D --> E["🐘 PostgreSQL"]
-    E --> F["⭐ Data Warehouse"]
-    F --> G["📊 Analytics"]
-
-    H["🌬️ Airflow"] -. orquestra .-> B
-    H -. orquestra .-> C
-    H -. orquestra .-> D
-    H -. orquestra .-> F
-```
-
----
-
-## 📚 Atualmente evoluindo em
-
-```text
-🧱 Data Warehouse
-🔄 ETL / ELT
-🌬️ Apache Airflow
-🐳 Docker
-⚙️ Orquestração de Pipelines
-🗃️ Modelagem Dimensional
-📊 Business Intelligence
-```
-
----
-
-## 🎯 Visão
-
-> Projetar pipelines e arquiteturas capazes de entregar dados organizados, confiáveis e úteis para pessoas e sistemas.
-
-```text
-RAW DATA
-   ↓
-INGEST
-   ↓
-TRANSFORM
-   ↓
-VALIDATE
-   ↓
-MODEL
-   ↓
-ANALYZE
-   ↓
-DECIDE
-```
+`Python` · `SQL` · `PostgreSQL` · `MySQL` · `Apache Airflow` · `Docker` · `Power BI` · `Git`
 
 ---
 
 <div align="center">
 
-### 📡 OPEN TO DATA • ENGINEERING • DATABASES • TECHNOLOGY
+**dados → engenharia → inteligência**
 
-**⌁ Gustavo Lopes ⌁**
-
-`dados → engenharia → inteligência`
+[Portfólio](https://iamgusta.github.io/iamgusta/) • [LinkedIn](https://www.linkedin.com/in/iamgustavoti) • [GitHub](https://github.com/iamgusta)
 
 </div>
