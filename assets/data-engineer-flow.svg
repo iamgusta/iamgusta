@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="250" viewBox="0 0 1200 250">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#07111f"/>
+      <stop offset="100%" stop-color="#0b1728"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00e5ff"/>
+      <stop offset="50%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#22c55e"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="250" rx="24" fill="url(#bg)"/>
+
+  <g opacity=".20">
+    <path d="M0 45H1200M0 95H1200M0 145H1200M0 195H1200" stroke="#6ea8d7"/>
+    <path d="M100 0V250M300 0V250M500 0V250M700 0V250M900 0V250M1100 0V250" stroke="#6ea8d7"/>
+  </g>
+
+  <path id="flowPath" d="M110 130 C240 45, 340 215, 470 130 S700 45, 830 130 S1020 215, 1090 130"
+        fill="none" stroke="url(#line)" stroke-width="5" stroke-linecap="round" filter="url(#glow)"/>
+
+  <g font-family="Segoe UI, Arial" text-anchor="middle">
+    <g>
+      <circle cx="110" cy="130" r="35" fill="#0f2740" stroke="#00e5ff" stroke-width="2"/>
+      <text x="110" y="126" fill="#fff" font-size="22">📡</text>
+      <text x="110" y="158" fill="#9ec8e8" font-size="12">SOURCE</text>
+    </g>
+
+    <g>
+      <circle cx="310" cy="130" r="35" fill="#0f2740" stroke="#2f80ed" stroke-width="2"/>
+      <text x="310" y="126" fill="#fff" font-size="22">🧲</text>
+      <text x="310" y="158" fill="#9ec8e8" font-size="12">INGEST</text>
+    </g>
+
+    <g>
+      <circle cx="510" cy="130" r="35" fill="#0f2740" stroke="#7c3aed" stroke-width="2"/>
+      <text x="510" y="126" fill="#fff" font-size="22">🧪</text>
+      <text x="510" y="158" fill="#9ec8e8" font-size="12">TRANSFORM</text>
+    </g>
+
+    <g>
+      <circle cx="710" cy="130" r="35" fill="#0f2740" stroke="#9d7bff" stroke-width="2"/>
+      <text x="710" y="126" fill="#fff" font-size="22">🛡️</text>
+      <text x="710" y="158" fill="#9ec8e8" font-size="12">QUALITY</text>
+    </g>
+
+    <g>
+      <circle cx="910" cy="130" r="35" fill="#0f2740" stroke="#22c55e" stroke-width="2"/>
+      <text x="910" y="126" fill="#fff" font-size="22">⭐</text>
+      <text x="910" y="158" fill="#9ec8e8" font-size="12">MODEL</text>
+    </g>
+
+    <g>
+      <circle cx="1090" cy="130" r="35" fill="#0f2740" stroke="#f2c811" stroke-width="2"/>
+      <text x="1090" y="126" fill="#fff" font-size="22">📊</text>
+      <text x="1090" y="158" fill="#9ec8e8" font-size="12">ANALYTICS</text>
+    </g>
+  </g>
+
+  <g filter="url(#glow)">
+    <circle r="7" fill="#00e5ff">
+      <animateMotion dur="4.2s" repeatCount="indefinite">
+        <mpath href="#flowPath"/>
+      </animateMotion>
+    </circle>
+    <circle r="5" fill="#9d7bff">
+      <animateMotion dur="4.2s" begin="1.4s" repeatCount="indefinite">
+        <mpath href="#flowPath"/>
+      </animateMotion>
+    </circle>
+    <circle r="5" fill="#22c55e">
+      <animateMotion dur="4.2s" begin="2.8s" repeatCount="indefinite">
+        <mpath href="#flowPath"/>
+      </animateMotion>
+    </circle>
+  </g>
+
+  <text x="600" y="32" text-anchor="middle" fill="#e8f1fb"
+        font-family="Segoe UI, Arial" font-size="16" font-weight="700" letter-spacing="3">
+    DATA ENGINEERING FLOW
+  </text>
+</svg>
