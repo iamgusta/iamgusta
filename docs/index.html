@@ -3,25 +3,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#060d17">
+  <meta name="theme-color" content="#090000">
   <meta name="description" content="Portfólio de Gustavo Lopes — Engenharia de Dados, Python, SQL, Airflow e Data Systems.">
   <title>Gustavo Lopes • Data Engineer</title>
 
   <style>
     :root{
-      --bg:#060d17;
-      --bg2:#0a1422;
-      --panel:rgba(13,28,47,.78);
-      --panel2:rgba(9,20,35,.92);
-      --text:#eaf5ff;
-      --muted:#8fa8bf;
-      --line:rgba(119,180,225,.16);
-      --cyan:#00e5ff;
-      --blue:#2f80ed;
-      --violet:#8b5cf6;
-      --green:#22c55e;
-      --yellow:#f2c811;
-      --shadow:0 22px 70px rgba(0,0,0,.35);
+      --bg:#050000;
+      --bg2:#100000;
+      --panel:rgba(32,7,7,.82);
+      --panel2:rgba(16,4,4,.94);
+      --text:#fff3f3;
+      --muted:#c8a0a0;
+      --line:rgba(255,70,70,.18);
+      --red:#ff2020;
+      --red2:#ff4d4d;
+      --red3:#8f0000;
+      --green:#2bd17e;
+      --shadow:0 24px 80px rgba(255,0,0,.12);
       --radius:22px;
     }
 
@@ -33,9 +32,9 @@
       min-height:100vh;
       color:var(--text);
       background:
-        radial-gradient(circle at 10% 0%, rgba(0,229,255,.12), transparent 28%),
-        radial-gradient(circle at 92% 10%, rgba(139,92,246,.12), transparent 26%),
-        linear-gradient(180deg,var(--bg),#03070d 78%);
+        radial-gradient(circle at 12% 0%, rgba(255,0,0,.14), transparent 30%),
+        radial-gradient(circle at 90% 8%, rgba(120,0,0,.22), transparent 28%),
+        linear-gradient(180deg,var(--bg),#020000 78%);
       font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
       overflow-x:hidden;
     }
@@ -54,7 +53,7 @@
       inset:0;
       z-index:-1;
       pointer-events:none;
-      background:linear-gradient(to bottom,rgba(6,13,23,.2),rgba(3,7,13,.92));
+      background:linear-gradient(to bottom,rgba(10,0,0,.08),rgba(2,0,0,.93));
     }
 
     a{color:inherit;text-decoration:none}
@@ -65,8 +64,8 @@
       top:0;
       z-index:50;
       backdrop-filter:blur(18px);
-      background:rgba(4,10,18,.70);
-      border-bottom:1px solid rgba(255,255,255,.055);
+      background:rgba(7,0,0,.72);
+      border-bottom:1px solid rgba(255,60,60,.09);
     }
 
     .nav{
@@ -78,12 +77,12 @@
     }
 
     .brand{
-      font-weight:900;
+      font-weight:950;
       letter-spacing:.12em;
       font-size:.92rem;
     }
 
-    .brand span{color:var(--cyan)}
+    .brand span{color:var(--red2)}
 
     .navlinks{
       display:flex;
@@ -95,12 +94,12 @@
     .navlinks a:hover{color:#fff}
 
     .hero{
-      min-height:84vh;
-      padding:76px 0 52px;
+      min-height:86vh;
+      padding:72px 0 48px;
       display:grid;
-      grid-template-columns:1.15fr .85fr;
+      grid-template-columns:1.03fr .97fr;
       align-items:center;
-      gap:54px;
+      gap:34px;
     }
 
     .eyebrow{
@@ -109,34 +108,36 @@
       gap:8px;
       padding:8px 12px;
       border-radius:999px;
-      border:1px solid rgba(0,229,255,.22);
-      background:rgba(0,229,255,.06);
-      color:var(--cyan);
+      border:1px solid rgba(255,55,55,.28);
+      background:rgba(255,0,0,.08);
+      color:#ff6666;
       font-weight:850;
       font-size:.8rem;
       letter-spacing:.04em;
+      box-shadow:0 0 24px rgba(255,0,0,.06);
     }
 
     h1{
       margin:22px 0 18px;
       max-width:800px;
-      font-size:clamp(3rem,7vw,6.2rem);
-      line-height:.91;
+      font-size:clamp(3rem,7vw,6rem);
+      line-height:.92;
       letter-spacing:-.06em;
     }
 
     h1 .gradient{
-      background:linear-gradient(90deg,var(--cyan),var(--blue),#9d7bff);
+      background:linear-gradient(90deg,#ff2020,#ff5d5d,#ff0000);
       -webkit-background-clip:text;
       background-clip:text;
       color:transparent;
+      filter:drop-shadow(0 0 18px rgba(255,0,0,.16));
     }
 
     .lead{
-      max-width:760px;
+      max-width:750px;
       color:var(--muted);
       line-height:1.75;
-      font-size:clamp(1rem,2vw,1.2rem);
+      font-size:clamp(1rem,2vw,1.18rem);
     }
 
     .actions{
@@ -153,67 +154,61 @@
       gap:8px;
       padding:12px 17px;
       border-radius:12px;
-      background:#0d2035;
+      background:#190707;
       border:1px solid var(--line);
-      font-weight:800;
+      font-weight:850;
       transition:.22s ease;
     }
 
     .btn.primary{
-      background:linear-gradient(90deg,#0f6fa8,#0f9fa0);
+      background:linear-gradient(90deg,#a90000,#ff1a1a);
       border-color:transparent;
+      box-shadow:0 10px 34px rgba(255,0,0,.18);
     }
 
     .btn:hover{
       transform:translateY(-2px);
-      border-color:rgba(0,229,255,.45);
-      box-shadow:0 12px 32px rgba(0,229,255,.08);
+      border-color:rgba(255,75,75,.50);
+      box-shadow:0 12px 36px rgba(255,0,0,.10);
     }
 
-    .terminal{
-      min-height:370px;
-      overflow:hidden;
-      border-radius:20px;
-      border:1px solid rgba(0,229,255,.18);
-      background:rgba(3,10,18,.90);
-      box-shadow:var(--shadow);
-      transform:perspective(1100px) rotateY(-3deg);
+    .mascot-wrap{
+      position:relative;
+      min-height:520px;
+      display:grid;
+      place-items:center;
     }
 
-    .termbar{
-      height:46px;
-      display:flex;
-      align-items:center;
-      gap:7px;
-      padding:0 16px;
-      background:#0b1827;
-      border-bottom:1px solid rgba(255,255,255,.06);
+    .mascot-glow{
+      position:absolute;
+      width:78%;
+      aspect-ratio:1;
+      border-radius:50%;
+      background:radial-gradient(circle,rgba(255,0,0,.24),rgba(255,0,0,0) 68%);
+      filter:blur(16px);
+      animation:pulse 2.7s ease-in-out infinite;
     }
 
-    .dot{width:10px;height:10px;border-radius:50%}
-    .r{background:#ff5f57}.y{background:#febc2e}.g{background:#28c840}
-
-    pre{
-      margin:0;
-      padding:24px;
-      color:#b7d8ef;
-      font:500 .88rem/1.75 "JetBrains Mono",Consolas,monospace;
-      white-space:pre-wrap;
-      overflow-wrap:anywhere;
+    .mascot{
+      position:relative;
+      width:min(620px,100%);
+      filter:drop-shadow(0 25px 50px rgba(255,0,0,.20));
+      animation:float 3.3s ease-in-out infinite;
+      user-select:none;
+      pointer-events:none;
     }
 
-    .cursor{
-      display:inline-block;
-      width:8px;
-      height:16px;
-      background:var(--cyan);
-      vertical-align:-3px;
-      animation:blink 1s step-end infinite;
+    @keyframes float{
+      0%,100%{transform:translateY(10px) rotate(-1deg)}
+      50%{transform:translateY(-16px) rotate(1deg)}
     }
 
-    @keyframes blink{50%{opacity:0}}
+    @keyframes pulse{
+      0%,100%{transform:scale(.95);opacity:.55}
+      50%{transform:scale(1.08);opacity:.95}
+    }
 
-    section{padding:66px 0}
+    section{padding:68px 0}
 
     .section-head{
       display:flex;
@@ -248,9 +243,9 @@
       overflow:hidden;
       padding:22px;
       border-radius:var(--radius);
-      background:linear-gradient(180deg,rgba(16,35,57,.82),rgba(8,19,32,.88));
-      border:1px solid rgba(255,255,255,.07);
-      box-shadow:0 10px 34px rgba(0,0,0,.20);
+      background:linear-gradient(180deg,rgba(43,9,9,.84),rgba(14,3,3,.92));
+      border:1px solid rgba(255,255,255,.06);
+      box-shadow:0 10px 34px rgba(0,0,0,.24);
       transition:.24s ease;
     }
 
@@ -260,13 +255,14 @@
       inset:0 auto auto 0;
       width:100%;
       height:2px;
-      background:linear-gradient(90deg,var(--cyan),var(--violet),transparent);
-      opacity:.65;
+      background:linear-gradient(90deg,#ff1111,#ff5c5c,transparent);
+      opacity:.8;
     }
 
     .card:hover{
       transform:translateY(-4px);
-      border-color:rgba(0,229,255,.26);
+      border-color:rgba(255,45,45,.30);
+      box-shadow:0 18px 45px rgba(255,0,0,.08);
     }
 
     .ico{font-size:1.8rem}
@@ -283,11 +279,11 @@
       padding:22px;
       border-radius:18px;
       background:var(--panel);
-      border:1px solid rgba(255,255,255,.07);
+      border:1px solid rgba(255,255,255,.06);
     }
 
     .metric .label{color:var(--muted);font-size:.82rem}
-    .metric .value{font-size:2.1rem;font-weight:900;margin-top:6px}
+    .metric .value{font-size:2.1rem;font-weight:950;margin-top:6px}
     .metric .ok{color:var(--green);font-size:.82rem;font-weight:850;margin-top:5px}
 
     .flow{
@@ -301,7 +297,7 @@
       padding:17px 10px;
       text-align:center;
       border-radius:16px;
-      background:#0c1d30;
+      background:#180606;
       border:1px solid var(--line);
       position:relative;
       display:flex;
@@ -315,7 +311,7 @@
       content:"→";
       position:absolute;
       right:-18px;
-      color:var(--cyan);
+      color:var(--red2);
       font-weight:900;
       z-index:4;
     }
@@ -330,9 +326,10 @@
       padding:24px;
       border-radius:24px;
       background:
-        linear-gradient(135deg,rgba(0,229,255,.07),rgba(139,92,246,.07)),
-        rgba(8,20,34,.88);
-      border:1px solid rgba(0,229,255,.16);
+        linear-gradient(135deg,rgba(255,0,0,.08),rgba(90,0,0,.10)),
+        rgba(14,3,3,.91);
+      border:1px solid rgba(255,50,50,.16);
+      box-shadow:var(--shadow);
     }
 
     .project ul{
@@ -344,28 +341,31 @@
       color:var(--muted);
     }
 
-    .project li::before{content:"✓ ";color:var(--green);font-weight:900}
+    .project li::before{
+      content:"✓ ";
+      color:var(--red2);
+      font-weight:900;
+    }
 
-    .project-panel{
+    .terminal{
       display:grid;
       place-items:center;
       border-radius:18px;
       min-height:260px;
       background:
-        radial-gradient(circle at center,rgba(0,229,255,.10),transparent 56%),
-        #07131f;
+        radial-gradient(circle at center,rgba(255,0,0,.11),transparent 56%),
+        #080101;
       border:1px solid rgba(255,255,255,.06);
       font-family:"JetBrains Mono",Consolas,monospace;
-      color:#b7d8ef;
-      text-align:center;
+      color:#f0baba;
+      text-align:left;
       padding:22px;
+      line-height:1.85;
     }
 
-    .project-panel b{
-      display:block;
-      color:var(--cyan);
-      font-size:1.3rem;
-      margin-bottom:10px;
+    .terminal b{
+      color:#ff5252;
+      font-size:1.08rem;
     }
 
     .reveal{
@@ -380,14 +380,14 @@
     }
 
     footer{
-      padding:40px 0 72px;
+      padding:42px 0 72px;
       text-align:center;
       color:var(--muted);
     }
 
     @media(max-width:950px){
       .hero{grid-template-columns:1fr}
-      .terminal{transform:none}
+      .mascot-wrap{min-height:420px}
       .card{grid-column:span 6}
       .status{grid-template-columns:repeat(2,1fr)}
       .flow{grid-template-columns:repeat(4,1fr)}
@@ -398,8 +398,9 @@
 
     @media(max-width:640px){
       .wrap{width:min(calc(100% - 20px),1180px)}
-      .hero{padding-top:46px;gap:28px}
+      .hero{padding-top:46px;gap:18px}
       h1{font-size:3rem}
+      .mascot-wrap{min-height:330px}
       .card{grid-column:1/-1}
       .status{grid-template-columns:1fr}
       .flow{grid-template-columns:1fr}
@@ -407,7 +408,6 @@
       .section-head{align-items:flex-start;flex-direction:column}
       .actions{flex-direction:column}
       .btn{width:100%}
-      pre{font-size:.77rem;padding:18px}
     }
   </style>
 </head>
@@ -418,7 +418,6 @@
   <nav>
     <div class="wrap nav">
       <div class="brand">🧬 GUSTAVO<span>.DATA</span></div>
-
       <div class="navlinks">
         <a href="#about">Sobre</a>
         <a href="#stack">Stack</a>
@@ -451,13 +450,9 @@
         </div>
       </div>
 
-      <div class="terminal">
-        <div class="termbar">
-          <span class="dot r"></span>
-          <span class="dot y"></span>
-          <span class="dot g"></span>
-        </div>
-        <pre id="terminalText"></pre>
+      <div class="mascot-wrap">
+        <div class="mascot-glow"></div>
+        <img class="mascot" src="../assets/robot-data-animated.svg" alt="Robô Data Engineer animado">
       </div>
     </div>
 
@@ -475,29 +470,10 @@
         </div>
 
         <div class="status reveal">
-          <div class="metric">
-            <div class="label">LOCATION</div>
-            <div class="value">AL 🇧🇷</div>
-            <div class="ok">● Arapiraca</div>
-          </div>
-
-          <div class="metric">
-            <div class="label">FOCUS</div>
-            <div class="value">DATA</div>
-            <div class="ok">● Engineering</div>
-          </div>
-
-          <div class="metric">
-            <div class="label">CORE</div>
-            <div class="value">SQL</div>
-            <div class="ok">● Python</div>
-          </div>
-
-          <div class="metric">
-            <div class="label">STATUS</div>
-            <div class="value">BUILD</div>
-            <div class="ok">● Evoluindo</div>
-          </div>
+          <div class="metric"><div class="label">LOCATION</div><div class="value">AL 🇧🇷</div><div class="ok">● Arapiraca</div></div>
+          <div class="metric"><div class="label">FOCUS</div><div class="value">DATA</div><div class="ok">● Engineering</div></div>
+          <div class="metric"><div class="label">CORE</div><div class="value">SQL</div><div class="ok">● Python</div></div>
+          <div class="metric"><div class="label">STATUS</div><div class="value">BUILD</div><div class="ok">● Evoluindo</div></div>
         </div>
       </div>
     </section>
@@ -509,48 +485,16 @@
             <span class="eyebrow">🧰 STACK</span>
             <h2>Ferramentas que movem dados.</h2>
           </div>
-          <p>
-            Tecnologias que uso para extrair, transformar, armazenar, orquestrar
-            e analisar dados.
-          </p>
+          <p>Tecnologias que uso para extrair, transformar, armazenar, orquestrar e analisar dados.</p>
         </div>
 
         <div class="grid">
-          <article class="card reveal">
-            <div class="ico">🐍</div>
-            <h3>Python</h3>
-            <p>Automação, ingestão, transformação e construção de pipelines.</p>
-          </article>
-
-          <article class="card reveal">
-            <div class="ico">🗃️</div>
-            <h3>SQL</h3>
-            <p>Consultas, modelagem, análise e manipulação de dados.</p>
-          </article>
-
-          <article class="card reveal">
-            <div class="ico">🐘</div>
-            <h3>PostgreSQL</h3>
-            <p>Persistência, Data Warehouse e modelagem dimensional.</p>
-          </article>
-
-          <article class="card reveal">
-            <div class="ico">🌬️</div>
-            <h3>Apache Airflow</h3>
-            <p>Orquestração, agendamento, retries e dependências.</p>
-          </article>
-
-          <article class="card reveal">
-            <div class="ico">🐳</div>
-            <h3>Docker</h3>
-            <p>Containers, serviços isolados e ambientes reproduzíveis.</p>
-          </article>
-
-          <article class="card reveal">
-            <div class="ico">📊</div>
-            <h3>Power BI</h3>
-            <p>Dashboards, indicadores e camada de consumo analítico.</p>
-          </article>
+          <article class="card reveal"><div class="ico">🐍</div><h3>Python</h3><p>Automação, ingestão, transformação e construção de pipelines.</p></article>
+          <article class="card reveal"><div class="ico">🗃️</div><h3>SQL</h3><p>Consultas, modelagem, análise e manipulação de dados.</p></article>
+          <article class="card reveal"><div class="ico">🐘</div><h3>PostgreSQL</h3><p>Persistência, Data Warehouse e modelagem dimensional.</p></article>
+          <article class="card reveal"><div class="ico">🌬️</div><h3>Apache Airflow</h3><p>Orquestração, agendamento, retries e dependências.</p></article>
+          <article class="card reveal"><div class="ico">🐳</div><h3>Docker</h3><p>Containers, serviços isolados e ambientes reproduzíveis.</p></article>
+          <article class="card reveal"><div class="ico">📊</div><h3>Power BI</h3><p>Dashboards, indicadores e camada de consumo analítico.</p></article>
         </div>
       </div>
     </section>
@@ -562,10 +506,7 @@
             <span class="eyebrow">🧬 DATA FLOW</span>
             <h2>Meu jeito de pensar dados.</h2>
           </div>
-          <p>
-            Uma boa solução não começa no dashboard. Ela começa na origem,
-            passa por qualidade e termina em informação utilizável.
-          </p>
+          <p>Uma boa solução começa na origem, passa por qualidade e termina em informação utilizável.</p>
         </div>
 
         <div class="flow reveal">
@@ -587,9 +528,7 @@
             <span class="eyebrow">🚀 FEATURED PROJECT</span>
             <h2>Plataforma de Dados de E-commerce.</h2>
           </div>
-          <p>
-            Um pipeline completo criado para praticar uma arquitetura real de Engenharia de Dados.
-          </p>
+          <p>Pipeline completo criado para praticar uma arquitetura real de Engenharia de Dados.</p>
         </div>
 
         <div class="project reveal">
@@ -616,16 +555,16 @@
             </div>
           </div>
 
-          <div class="project-panel">
+          <div class="terminal">
             <div>
-              <b>PIPELINE STATUS</b>
+              <b>PIPELINE STATUS</b><br><br>
               📡 API .............. ONLINE<br>
               🐳 Docker ........... READY<br>
               🌬️ Airflow ......... SCHEDULED<br>
               🐘 PostgreSQL ...... CONNECTED<br>
               ⭐ Warehouse ........ LOADED<br>
               📊 Power BI ........ CONNECTED<br><br>
-              <span style="color:#22c55e;font-weight:900">✅ 10 / 10 TASKS SUCCESS</span>
+              <span style="color:#ff4d4d;font-weight:900">● 10 / 10 TASKS SUCCESS</span>
             </div>
           </div>
         </div>
@@ -635,68 +574,12 @@
 
   <footer>
     <div class="wrap">
-      🧬 dados → engenharia → inteligência<br>
+      🔴 dados → engenharia → inteligência<br>
       <span style="font-size:.82rem">Gustavo Lopes • Data Engineering</span>
     </div>
   </footer>
 
   <script>
-    // Terminal animado
-    const terminalLines = [
-      "$ whoami",
-      "Gustavo Lopes",
-      "",
-      "$ focus --current",
-      "Data Engineering",
-      "",
-      "$ stack --core",
-      "Python | SQL | PostgreSQL | Airflow",
-      "",
-      "$ mission --run",
-      "raw_data -> trusted_data -> decisions",
-      "",
-      "✓ pipeline mindset loaded",
-      "✓ ready to build"
-    ];
-
-    const terminal = document.getElementById("terminalText");
-    let lineIndex = 0;
-    let charIndex = 0;
-
-    function typeTerminal(){
-      if(lineIndex >= terminalLines.length){
-        terminal.innerHTML += '\\n<span class="cursor"></span>';
-        return;
-      }
-
-      const line = terminalLines[lineIndex];
-
-      if(charIndex < line.length){
-        terminal.textContent += line[charIndex++];
-        setTimeout(typeTerminal, 22);
-      }else{
-        terminal.textContent += "\\n";
-        lineIndex++;
-        charIndex = 0;
-        setTimeout(typeTerminal, 120);
-      }
-    }
-
-    typeTerminal();
-
-    // Revelação ao rolar
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting){
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    }, {threshold:.12});
-
-    document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
-
-    // Rede animada de dados
     const canvas = document.getElementById("network");
     const ctx = canvas.getContext("2d");
     let particles = [];
@@ -708,7 +591,7 @@
       canvas.style.height = window.innerHeight + "px";
       ctx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0);
 
-      const count = Math.min(70, Math.max(28, Math.floor(window.innerWidth / 22)));
+      const count = Math.min(72, Math.max(28, Math.floor(window.innerWidth / 21)));
       particles = Array.from({length:count}, () => ({
         x:Math.random()*window.innerWidth,
         y:Math.random()*window.innerHeight,
@@ -730,7 +613,7 @@
 
         ctx.beginPath();
         ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-        ctx.fillStyle = "rgba(0,229,255,.45)";
+        ctx.fillStyle = "rgba(255,45,45,.50)";
         ctx.fill();
       }
 
@@ -746,7 +629,7 @@
             ctx.beginPath();
             ctx.moveTo(a.x,a.y);
             ctx.lineTo(b.x,b.y);
-            ctx.strokeStyle = `rgba(75,163,255,${(1-d/120)*.11})`;
+            ctx.strokeStyle = `rgba(255,35,35,${(1-d/120)*.13})`;
             ctx.stroke();
           }
         }
@@ -754,6 +637,17 @@
 
       requestAnimationFrame(draw);
     }
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {threshold:.12});
+
+    document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
 
     window.addEventListener("resize", resize);
     resize();
