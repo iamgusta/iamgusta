@@ -108,8 +108,6 @@ Pipeline completo de Engenharia de Dados com:
 **Projeto online:**  
 https://iamgusta.github.io/Plataforma-dados-e-commerce/
 
-**Repositório:**  
-https://github.com/iamgusta/Plataforma-dados-e-commerce
 
 ---
 
